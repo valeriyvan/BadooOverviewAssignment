@@ -1,0 +1,439 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		35E7C5A11C25497100C65B82 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E7C5A01C25497100C65B82 /* main.m */; };
+		35E7C5A41C25497100C65B82 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E7C5A31C25497100C65B82 /* AppDelegate.m */; };
+		35E7C5A71C25497100C65B82 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E7C5A61C25497100C65B82 /* MasterViewController.m */; };
+		35E7C5AA1C25497100C65B82 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E7C5A91C25497100C65B82 /* DetailViewController.m */; };
+		35E7C5AD1C25497100C65B82 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35E7C5AB1C25497100C65B82 /* Main.storyboard */; };
+		35E7C5AF1C25497100C65B82 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35E7C5AE1C25497100C65B82 /* Images.xcassets */; };
+		35E7C5B21C25497100C65B82 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35E7C5B01C25497100C65B82 /* LaunchScreen.xib */; };
+		35E7C5BE1C25497100C65B82 /* BadooOverviewAssignmentTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E7C5BD1C25497100C65B82 /* BadooOverviewAssignmentTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		35E7C5B81C25497100C65B82 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 35E7C5931C25497100C65B82 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 35E7C59A1C25497100C65B82;
+			remoteInfo = BadooOverviewAssignment;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		35E7C59B1C25497100C65B82 /* BadooOverviewAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BadooOverviewAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		35E7C59F1C25497100C65B82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		35E7C5A01C25497100C65B82 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		35E7C5A21C25497100C65B82 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		35E7C5A31C25497100C65B82 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		35E7C5A51C25497100C65B82 /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
+		35E7C5A61C25497100C65B82 /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
+		35E7C5A81C25497100C65B82 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		35E7C5A91C25497100C65B82 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		35E7C5AC1C25497100C65B82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		35E7C5AE1C25497100C65B82 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		35E7C5B11C25497100C65B82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		35E7C5B71C25497100C65B82 /* BadooOverviewAssignmentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BadooOverviewAssignmentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		35E7C5BC1C25497100C65B82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		35E7C5BD1C25497100C65B82 /* BadooOverviewAssignmentTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BadooOverviewAssignmentTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		35E7C5981C25497100C65B82 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		35E7C5B41C25497100C65B82 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		35E7C5921C25497100C65B82 = {
+			isa = PBXGroup;
+			children = (
+				35E7C59D1C25497100C65B82 /* BadooOverviewAssignment */,
+				35E7C5BA1C25497100C65B82 /* BadooOverviewAssignmentTests */,
+				35E7C59C1C25497100C65B82 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		35E7C59C1C25497100C65B82 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				35E7C59B1C25497100C65B82 /* BadooOverviewAssignment.app */,
+				35E7C5B71C25497100C65B82 /* BadooOverviewAssignmentTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		35E7C59D1C25497100C65B82 /* BadooOverviewAssignment */ = {
+			isa = PBXGroup;
+			children = (
+				35E7C5A21C25497100C65B82 /* AppDelegate.h */,
+				35E7C5A31C25497100C65B82 /* AppDelegate.m */,
+				35E7C5A51C25497100C65B82 /* MasterViewController.h */,
+				35E7C5A61C25497100C65B82 /* MasterViewController.m */,
+				35E7C5A81C25497100C65B82 /* DetailViewController.h */,
+				35E7C5A91C25497100C65B82 /* DetailViewController.m */,
+				35E7C5AB1C25497100C65B82 /* Main.storyboard */,
+				35E7C5AE1C25497100C65B82 /* Images.xcassets */,
+				35E7C5B01C25497100C65B82 /* LaunchScreen.xib */,
+				35E7C59E1C25497100C65B82 /* Supporting Files */,
+			);
+			path = BadooOverviewAssignment;
+			sourceTree = "<group>";
+		};
+		35E7C59E1C25497100C65B82 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				35E7C59F1C25497100C65B82 /* Info.plist */,
+				35E7C5A01C25497100C65B82 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		35E7C5BA1C25497100C65B82 /* BadooOverviewAssignmentTests */ = {
+			isa = PBXGroup;
+			children = (
+				35E7C5BD1C25497100C65B82 /* BadooOverviewAssignmentTests.m */,
+				35E7C5BB1C25497100C65B82 /* Supporting Files */,
+			);
+			path = BadooOverviewAssignmentTests;
+			sourceTree = "<group>";
+		};
+		35E7C5BB1C25497100C65B82 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				35E7C5BC1C25497100C65B82 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		35E7C59A1C25497100C65B82 /* BadooOverviewAssignment */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 35E7C5C11C25497100C65B82 /* Build configuration list for PBXNativeTarget "BadooOverviewAssignment" */;
+			buildPhases = (
+				35E7C5971C25497100C65B82 /* Sources */,
+				35E7C5981C25497100C65B82 /* Frameworks */,
+				35E7C5991C25497100C65B82 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BadooOverviewAssignment;
+			productName = BadooOverviewAssignment;
+			productReference = 35E7C59B1C25497100C65B82 /* BadooOverviewAssignment.app */;
+			productType = "com.apple.product-type.application";
+		};
+		35E7C5B61C25497100C65B82 /* BadooOverviewAssignmentTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 35E7C5C41C25497100C65B82 /* Build configuration list for PBXNativeTarget "BadooOverviewAssignmentTests" */;
+			buildPhases = (
+				35E7C5B31C25497100C65B82 /* Sources */,
+				35E7C5B41C25497100C65B82 /* Frameworks */,
+				35E7C5B51C25497100C65B82 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				35E7C5B91C25497100C65B82 /* PBXTargetDependency */,
+			);
+			name = BadooOverviewAssignmentTests;
+			productName = BadooOverviewAssignmentTests;
+			productReference = 35E7C5B71C25497100C65B82 /* BadooOverviewAssignmentTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		35E7C5931C25497100C65B82 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = Badoo;
+				TargetAttributes = {
+					35E7C59A1C25497100C65B82 = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					35E7C5B61C25497100C65B82 = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = 35E7C59A1C25497100C65B82;
+					};
+				};
+			};
+			buildConfigurationList = 35E7C5961C25497100C65B82 /* Build configuration list for PBXProject "BadooOverviewAssignment" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 35E7C5921C25497100C65B82;
+			productRefGroup = 35E7C59C1C25497100C65B82 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				35E7C59A1C25497100C65B82 /* BadooOverviewAssignment */,
+				35E7C5B61C25497100C65B82 /* BadooOverviewAssignmentTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		35E7C5991C25497100C65B82 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35E7C5AD1C25497100C65B82 /* Main.storyboard in Resources */,
+				35E7C5B21C25497100C65B82 /* LaunchScreen.xib in Resources */,
+				35E7C5AF1C25497100C65B82 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		35E7C5B51C25497100C65B82 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		35E7C5971C25497100C65B82 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35E7C5A41C25497100C65B82 /* AppDelegate.m in Sources */,
+				35E7C5A71C25497100C65B82 /* MasterViewController.m in Sources */,
+				35E7C5A11C25497100C65B82 /* main.m in Sources */,
+				35E7C5AA1C25497100C65B82 /* DetailViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		35E7C5B31C25497100C65B82 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35E7C5BE1C25497100C65B82 /* BadooOverviewAssignmentTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		35E7C5B91C25497100C65B82 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 35E7C59A1C25497100C65B82 /* BadooOverviewAssignment */;
+			targetProxy = 35E7C5B81C25497100C65B82 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		35E7C5AB1C25497100C65B82 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				35E7C5AC1C25497100C65B82 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		35E7C5B01C25497100C65B82 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				35E7C5B11C25497100C65B82 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		35E7C5BF1C25497100C65B82 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		35E7C5C01C25497100C65B82 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		35E7C5C21C25497100C65B82 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = BadooOverviewAssignment/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		35E7C5C31C25497100C65B82 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = BadooOverviewAssignment/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		35E7C5C51C25497100C65B82 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = BadooOverviewAssignmentTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BadooOverviewAssignment.app/BadooOverviewAssignment";
+			};
+			name = Debug;
+		};
+		35E7C5C61C25497100C65B82 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = BadooOverviewAssignmentTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BadooOverviewAssignment.app/BadooOverviewAssignment";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		35E7C5961C25497100C65B82 /* Build configuration list for PBXProject "BadooOverviewAssignment" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				35E7C5BF1C25497100C65B82 /* Debug */,
+				35E7C5C01C25497100C65B82 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		35E7C5C11C25497100C65B82 /* Build configuration list for PBXNativeTarget "BadooOverviewAssignment" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				35E7C5C21C25497100C65B82 /* Debug */,
+				35E7C5C31C25497100C65B82 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		35E7C5C41C25497100C65B82 /* Build configuration list for PBXNativeTarget "BadooOverviewAssignmentTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				35E7C5C51C25497100C65B82 /* Debug */,
+				35E7C5C61C25497100C65B82 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 35E7C5931C25497100C65B82 /* Project object */;
+}
