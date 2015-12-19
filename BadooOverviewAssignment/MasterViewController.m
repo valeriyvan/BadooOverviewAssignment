@@ -44,6 +44,7 @@
     }
     self.transactions = [transactionsMutable copy];
     // TODO: add count to title
+    self.title = [NSString stringWithFormat:@"%lu products, %lu transactions", self.skus.count, transactionsList.count];
     [self.tableView reloadData];
 }
 
@@ -52,10 +53,9 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([[segue identifier] isEqualToString:@"showDetail"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        //NSDate *object = self.objects[indexPath.row];
         DetailViewController *controller = (DetailViewController *)[[segue destinationViewController] topViewController];
-        //[controller setDetailItem:object];
-        controller.navigationItem.leftBarButtonItem = self.splitViewController.displayModeButtonItem;
+        controller.transactions = self.transactions[indexPath.row];
+        controller.navigationItem.leftBarButtonItem = self.splitViewController.displayModeButtonItem;  // TODO: test how it's going on iPad
         controller.navigationItem.leftItemsSupplementBackButton = YES;
     }
 }
