@@ -15,6 +15,10 @@
 		35E7C5AF1C25497100C65B82 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35E7C5AE1C25497100C65B82 /* Images.xcassets */; };
 		35E7C5B21C25497100C65B82 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35E7C5B01C25497100C65B82 /* LaunchScreen.xib */; };
 		35E7C5BE1C25497100C65B82 /* BadooOverviewAssignmentTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E7C5BD1C25497100C65B82 /* BadooOverviewAssignmentTests.m */; };
+		35E7C5CC1C254AB300C65B82 /* rates1.plist in Resources */ = {isa = PBXBuildFile; fileRef = 35E7C5C81C254AB300C65B82 /* rates1.plist */; };
+		35E7C5CD1C254AB300C65B82 /* rates2.plist in Resources */ = {isa = PBXBuildFile; fileRef = 35E7C5C91C254AB300C65B82 /* rates2.plist */; };
+		35E7C5CE1C254AB300C65B82 /* transactions1.plist in Resources */ = {isa = PBXBuildFile; fileRef = 35E7C5CA1C254AB300C65B82 /* transactions1.plist */; };
+		35E7C5CF1C254AB300C65B82 /* transactions2.plist in Resources */ = {isa = PBXBuildFile; fileRef = 35E7C5CB1C254AB300C65B82 /* transactions2.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +47,10 @@
 		35E7C5B71C25497100C65B82 /* BadooOverviewAssignmentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BadooOverviewAssignmentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		35E7C5BC1C25497100C65B82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		35E7C5BD1C25497100C65B82 /* BadooOverviewAssignmentTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BadooOverviewAssignmentTests.m; sourceTree = "<group>"; };
+		35E7C5C81C254AB300C65B82 /* rates1.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = rates1.plist; sourceTree = "<group>"; };
+		35E7C5C91C254AB300C65B82 /* rates2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = rates2.plist; sourceTree = "<group>"; };
+		35E7C5CA1C254AB300C65B82 /* transactions1.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = transactions1.plist; sourceTree = "<group>"; };
+		35E7C5CB1C254AB300C65B82 /* transactions2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = transactions2.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +101,7 @@
 				35E7C5AB1C25497100C65B82 /* Main.storyboard */,
 				35E7C5AE1C25497100C65B82 /* Images.xcassets */,
 				35E7C5B01C25497100C65B82 /* LaunchScreen.xib */,
+				35E7C5C71C254AB300C65B82 /* DataSets */,
 				35E7C59E1C25497100C65B82 /* Supporting Files */,
 			);
 			path = BadooOverviewAssignment;
@@ -122,6 +131,17 @@
 				35E7C5BC1C25497100C65B82 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		35E7C5C71C254AB300C65B82 /* DataSets */ = {
+			isa = PBXGroup;
+			children = (
+				35E7C5C81C254AB300C65B82 /* rates1.plist */,
+				35E7C5C91C254AB300C65B82 /* rates2.plist */,
+				35E7C5CA1C254AB300C65B82 /* transactions1.plist */,
+				35E7C5CB1C254AB300C65B82 /* transactions2.plist */,
+			);
+			path = DataSets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -206,7 +226,11 @@
 			files = (
 				35E7C5AD1C25497100C65B82 /* Main.storyboard in Resources */,
 				35E7C5B21C25497100C65B82 /* LaunchScreen.xib in Resources */,
+				35E7C5CD1C254AB300C65B82 /* rates2.plist in Resources */,
+				35E7C5CC1C254AB300C65B82 /* rates1.plist in Resources */,
 				35E7C5AF1C25497100C65B82 /* Images.xcassets in Resources */,
+				35E7C5CE1C254AB300C65B82 /* transactions1.plist in Resources */,
+				35E7C5CF1C254AB300C65B82 /* transactions2.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,6 +380,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = BadooOverviewAssignment/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -366,6 +391,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = BadooOverviewAssignment/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
