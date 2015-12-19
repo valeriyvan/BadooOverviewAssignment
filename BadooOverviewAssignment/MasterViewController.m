@@ -8,13 +8,16 @@
 
 #import "MasterViewController.h"
 #import "DetailViewController.h"
+#import "BADConvertionRates.h"
 
 #define kTransactionsFilename @"transactions1.plist"
+#define kRatesFilename @"rates1.plist"
 
 @interface MasterViewController ()
 
-@property NSArray *skus;
-@property NSArray *transactions;
+@property (strong, nonatomic) NSArray *skus;
+@property (strong, nonatomic) NSArray *transactions;
+@property (strong, nonatomic) BADConvertionRates *convertionRates;
 @end
 
 @implementation MasterViewController
@@ -43,8 +46,14 @@
         [transactionsMutable addObject:transactionsForSku];
     }
     self.transactions = [transactionsMutable copy];
-    // TODO: add count to title
     self.title = [NSString stringWithFormat:@"%lu products, %lu transactions", self.skus.count, transactionsList.count];
+    
+    // TODO: move this background
+    NSString *ratesPathname = [[NSBundle mainBundle] pathForResource:kRatesFilename ofType:nil];
+    // TODO: if file exists at path
+    NSArray *ratesList = [NSArray arrayWithContentsOfFile:ratesPathname];
+    self.convertionRates = [[BADConvertionRates alloc] initWithRates:ratesList];
+    
     [self.tableView reloadData];
 }
 
@@ -55,6 +64,7 @@
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         DetailViewController *controller = (DetailViewController *)[[segue destinationViewController] topViewController];
         controller.transactions = self.transactions[indexPath.row];
+        controller.convertionRates = self.convertionRates;
         controller.navigationItem.leftBarButtonItem = self.splitViewController.displayModeButtonItem;  // TODO: test how it's going on iPad
         controller.navigationItem.leftItemsSupplementBackButton = YES;
     }

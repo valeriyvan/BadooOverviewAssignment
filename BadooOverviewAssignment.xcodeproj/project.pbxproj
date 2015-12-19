@@ -19,6 +19,7 @@
 		35E7C5CD1C254AB300C65B82 /* rates2.plist in Resources */ = {isa = PBXBuildFile; fileRef = 35E7C5C91C254AB300C65B82 /* rates2.plist */; };
 		35E7C5CE1C254AB300C65B82 /* transactions1.plist in Resources */ = {isa = PBXBuildFile; fileRef = 35E7C5CA1C254AB300C65B82 /* transactions1.plist */; };
 		35E7C5CF1C254AB300C65B82 /* transactions2.plist in Resources */ = {isa = PBXBuildFile; fileRef = 35E7C5CB1C254AB300C65B82 /* transactions2.plist */; };
+		35E7C5D11C255BC300C65B82 /* BADConvertionRates.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E7C5D01C255BC300C65B82 /* BADConvertionRates.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		35E7C5C91C254AB300C65B82 /* rates2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = rates2.plist; sourceTree = "<group>"; };
 		35E7C5CA1C254AB300C65B82 /* transactions1.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = transactions1.plist; sourceTree = "<group>"; };
 		35E7C5CB1C254AB300C65B82 /* transactions2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = transactions2.plist; sourceTree = "<group>"; };
+		35E7C5D01C255BC300C65B82 /* BADConvertionRates.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BADConvertionRates.m; sourceTree = "<group>"; };
+		35E7C5D21C255BD100C65B82 /* BADConvertionRates.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BADConvertionRates.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +101,8 @@
 				35E7C5A61C25497100C65B82 /* MasterViewController.m */,
 				35E7C5A81C25497100C65B82 /* DetailViewController.h */,
 				35E7C5A91C25497100C65B82 /* DetailViewController.m */,
+				35E7C5D21C255BD100C65B82 /* BADConvertionRates.h */,
+				35E7C5D01C255BC300C65B82 /* BADConvertionRates.m */,
 				35E7C5AB1C25497100C65B82 /* Main.storyboard */,
 				35E7C5AE1C25497100C65B82 /* Images.xcassets */,
 				35E7C5B01C25497100C65B82 /* LaunchScreen.xib */,
@@ -250,6 +255,7 @@
 			files = (
 				35E7C5A41C25497100C65B82 /* AppDelegate.m in Sources */,
 				35E7C5A71C25497100C65B82 /* MasterViewController.m in Sources */,
+				35E7C5D11C255BC300C65B82 /* BADConvertionRates.m in Sources */,
 				35E7C5A11C25497100C65B82 /* main.m in Sources */,
 				35E7C5AA1C25497100C65B82 /* DetailViewController.m in Sources */,
 			);
@@ -450,6 +456,7 @@
 				35E7C5C31C25497100C65B82 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		35E7C5C41C25497100C65B82 /* Build configuration list for PBXNativeTarget "BadooOverviewAssignmentTests" */ = {
 			isa = XCConfigurationList;
@@ -458,6 +465,7 @@
 				35E7C5C61C25497100C65B82 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

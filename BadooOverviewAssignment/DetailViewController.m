@@ -7,6 +7,7 @@
 //
 
 #import "DetailViewController.h"
+#import "BADConvertionRates.h"
 
 @interface DetailViewController ()
 
@@ -20,6 +21,8 @@
         self.title = [NSString stringWithFormat:@"Transactions for %@ (%lu)", self.transactions.firstObject[@"sku"]?:@"no sku", (unsigned long)self.transactions.count];
     }
     [self.tableView reloadData];
+    
+    // TODO: remove Back title from back button
 }
 
 #pragma mark - Segues
@@ -27,7 +30,14 @@
 #pragma mark - Table View
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    return [NSString stringWithFormat:@"Total: *****.*****"];
+    // TODO: user viewForHeder and movu this to background
+    double total = 0;
+    for (NSDictionary *transaction in self.transactions) {
+        NSString *currency = transaction[@"currency"];
+        double amount = [transaction[@"amount"] doubleValue];
+        total += amount / [self.convertionRates rateFrom:currency to:@"GBP"];
+    }
+    return [NSString stringWithFormat:@"Total: £%.2lf", total];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -41,10 +51,16 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell detail" forIndexPath:indexPath];
     NSDictionary *transaction = self.transactions[indexPath.row];
-    cell.textLabel.text = [NSString stringWithFormat:@"%@%.2f", transaction[@"currency"], [transaction[@"amount"] floatValue]]; // TODO: currency symbol
-//    cell.detailTextLabel.text = [NSString stringWithFormat:@"%lu transactions", (unsigned long)transactionsForSKU.count];
+    NSString *currency = transaction[@"currency"];
+    double amount = [transaction[@"amount"] doubleValue];
+    cell.textLabel.text = [NSString stringWithFormat:@"%@%.2lf", [self currencySymbolFor:currency], amount];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"£%.2lf", amount / [self.convertionRates rateFrom:currency to:@"GBP"]];
     return cell;
 }
 
+-(NSString*)currencySymbolFor:(NSString*)s {
+    NSDictionary *d = @{ @"GBP" : @"£", @"USD" : @"$", @"CAD" : @"CA$", @"AUD" : @"A$", @"EUR" : @"€"};
+    return d[s] ?: @"$$$";
+}
 
 @end

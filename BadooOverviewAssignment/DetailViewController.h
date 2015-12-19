@@ -8,9 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+@class BADConvertionRates;
+
 @interface DetailViewController : UITableViewController
 
 @property (strong, nonatomic) NSArray *transactions;
+@property (strong, nonatomic) BADConvertionRates *convertionRates;
 
 @end
 
