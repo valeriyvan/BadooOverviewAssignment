@@ -9,9 +9,12 @@
 #import "MasterViewController.h"
 #import "DetailViewController.h"
 
+#define kTransactionsFilename @"transactions1.plist"
+
 @interface MasterViewController ()
 
-@property NSMutableArray *objects;
+@property NSArray *skus;
+@property NSArray *transactions;
 @end
 
 @implementation MasterViewController
@@ -27,25 +30,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    self.navigationItem.leftBarButtonItem = self.editButtonItem;
-
-    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
-    self.navigationItem.rightBarButtonItem = addButton;
     self.detailViewController = (DetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
-}
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-- (void)insertNewObject:(id)sender {
-    if (!self.objects) {
-        self.objects = [[NSMutableArray alloc] init];
+    // TODO: move this background
+    NSString *transactionsPathname = [[NSBundle mainBundle] pathForResource:kTransactionsFilename ofType:nil];
+    // TODO: if file exists at path
+    NSArray *transactionsList = [NSArray arrayWithContentsOfFile:transactionsPathname];
+    self.skus = [transactionsList valueForKeyPath:@"@distinctUnionOfObjects.sku"];
+    NSMutableArray *transactionsMutable = [NSMutableArray arrayWithCapacity:self.skus.count];
+    for (NSString *sku in self.skus) {
+        NSArray *transactionsForSku = [transactionsList filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"self.sku == %@", sku]];
+        [transactionsMutable addObject:transactionsForSku];
     }
-    [self.objects insertObject:[NSDate date] atIndex:0];
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
-    [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+    self.transactions = [transactionsMutable copy];
+    // TODO: add count to title
+    [self.tableView reloadData];
 }
 
 #pragma mark - Segues
@@ -53,9 +52,9 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([[segue identifier] isEqualToString:@"showDetail"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        NSDate *object = self.objects[indexPath.row];
+        //NSDate *object = self.objects[indexPath.row];
         DetailViewController *controller = (DetailViewController *)[[segue destinationViewController] topViewController];
-        [controller setDetailItem:object];
+        //[controller setDetailItem:object];
         controller.navigationItem.leftBarButtonItem = self.splitViewController.displayModeButtonItem;
         controller.navigationItem.leftItemsSupplementBackButton = YES;
     }
@@ -68,29 +67,19 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.objects.count;
+    return self.skus.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
 
-    NSDate *object = self.objects[indexPath.row];
-    cell.textLabel.text = [object description];
+    //NSDictionary *dic = self.transactions[indexPath.row];
+    //cell.textLabel.text = dic[@"sku"];
+    
+    cell.textLabel.text = self.skus[indexPath.row];
+    NSArray *transactionsForSKU = self.transactions[indexPath.row];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%lu transactions", (unsigned long)transactionsForSKU.count];
     return cell;
-}
-
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        [self.objects removeObjectAtIndex:indexPath.row];
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
-    }
 }
 
 @end
