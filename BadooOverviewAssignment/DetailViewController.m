@@ -33,7 +33,7 @@
     for (NSDictionary *transaction in self.transactions) {
         NSString *currency = transaction[@"currency"];
         double amount = [transaction[@"amount"] doubleValue];
-        total += amount / [self.convertionRates rateFrom:currency to:@"GBP"];
+        total += amount * [self.convertionRates rateFrom:currency to:@"GBP"];
     }
     return [NSString stringWithFormat:@"Total: £%.2lf", total];
 }
@@ -52,7 +52,7 @@
     NSString *currency = transaction[@"currency"];
     double amount = [transaction[@"amount"] doubleValue];
     cell.textLabel.text = [NSString stringWithFormat:@"%@%.2lf", [self currencySymbolFor:currency], amount];
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"£%.2lf", amount / [self.convertionRates rateFrom:currency to:@"GBP"]];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"£%.2lf", amount * [self.convertionRates rateFrom:currency to:@"GBP"]];
     return cell;
 }
 

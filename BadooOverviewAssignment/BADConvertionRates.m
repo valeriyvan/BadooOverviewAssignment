@@ -74,7 +74,7 @@ void printWeights(Weight *array, NSUInteger count);
             NSDictionary *nextEdge = edges[nextEngeIndex];
             NSString *toVertex = [[vertices filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"self == %@", nextEdge[@"to"]]] firstObject];
             NSUInteger toVertexIndex = [vertices indexOfObject:toVertex];
-            double weight = verticesWeights[indexOfVertexWithMinWeight].weight == 0 ? 1.0/[nextEdge[@"rate"] doubleValue] : verticesWeights[indexOfVertexWithMinWeight].weight * 1.0/[nextEdge[@"rate"] doubleValue];
+            double weight = verticesWeights[indexOfVertexWithMinWeight].weight == 0 ? [nextEdge[@"rate"] doubleValue] : verticesWeights[indexOfVertexWithMinWeight].weight * [nextEdge[@"rate"] doubleValue];
             if (weight < verticesWeights[toVertexIndex].weight) {
                 verticesWeights[toVertexIndex].weight = weight;
             }
