@@ -21,8 +21,6 @@
         self.title = [NSString stringWithFormat:@"Transactions for %@ (%lu)", self.transactions.firstObject[@"sku"]?:@"no sku", (unsigned long)self.transactions.count];
     }
     [self.tableView reloadData];
-    
-    // TODO: remove Back title from back button
 }
 
 #pragma mark - Segues
@@ -30,7 +28,7 @@
 #pragma mark - Table View
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    // TODO: user viewForHeder and movu this to background
+    // TODO: user viewForHeader and move this to background
     double total = 0;
     for (NSDictionary *transaction in self.transactions) {
         NSString *currency = transaction[@"currency"];
