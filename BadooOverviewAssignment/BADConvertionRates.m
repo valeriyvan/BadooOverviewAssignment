@@ -42,6 +42,10 @@ void printWeights(Weight *array, NSUInteger count);
     //if (filteredRates.count > 0) {
     //    return [[filteredRates firstObject][@"rate"] doubleValue];
     //}
+
+    if (!self.rates) {
+        return 0;
+    }
     
     NSArray *fromVertices = [self.rates valueForKeyPath:@"@distinctUnionOfObjects.from"];
     NSArray *toVertices = [self.rates valueForKeyPath:@"@distinctUnionOfObjects.to"];
