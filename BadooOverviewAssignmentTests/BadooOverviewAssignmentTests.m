@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
+#import "BADConvertionRates.h"
 
 @interface BadooOverviewAssignmentTests : XCTestCase
 
@@ -25,9 +26,22 @@
     [super tearDown];
 }
 
-- (void)testExample {
-    // This is an example of a functional test case.
-    XCTAssert(YES, @"Pass");
+- (void)testOneStep {
+    NSArray *array = @[ @{ @"from": @"USD", @"to": @"GBP", @"rate": @"2.0" } ];
+    BADConvertionRates *rates = [[BADConvertionRates alloc] initWithRates:array];
+    XCTAssert([rates rateFrom:@"USD" to:@"GBP"] == 2.0, @"Pass one step test");
+}
+
+- (void)testTwoStep {
+    NSArray *array = @[ @{ @"from": @"CAD", @"to": @"USD", @"rate": @"2.0" }, @{ @"from": @"USD", @"to": @"GBP", @"rate": @"2.0" } ];
+    BADConvertionRates *rates = [[BADConvertionRates alloc] initWithRates:array];
+    XCTAssert([rates rateFrom:@"CAD" to:@"GBP"] == 4.0, @"Pass double step test");
+}
+
+- (void)testThreeStep {
+    NSArray *array = @[ @{ @"from": @"AUD", @"to": @"CAD", @"rate": @"2.0" }, @{ @"from": @"CAD", @"to": @"USD", @"rate": @"2.0" }, @{ @"from": @"USD", @"to": @"GBP", @"rate": @"2.0" } ];
+    BADConvertionRates *rates = [[BADConvertionRates alloc] initWithRates:array];
+    XCTAssert([rates rateFrom:@"AUD" to:@"GBP"] == 8.0, @"Pass tripple step test");
 }
 
 - (void)testPerformanceExample {
