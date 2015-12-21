@@ -15,8 +15,8 @@
 
 @interface MasterViewController ()
 
-@property (strong, nonatomic) NSArray *skus;
-@property (strong, nonatomic) NSArray *transactions;
+@property (strong, nonatomic) NSArray<NSString*> *skus;
+@property (strong, nonatomic) NSArray<NSArray<NSDictionary<NSString*, NSString*>*>*>  *transactions;
 @property (strong, nonatomic) BADConvertionRates *convertionRates;
 @end
 
@@ -38,11 +38,11 @@
     // TODO: move this background
     NSString *transactionsPathname = [[NSBundle mainBundle] pathForResource:kTransactionsFilename ofType:nil];
     // TODO: if file exists at path
-    NSArray *transactionsList = [NSArray arrayWithContentsOfFile:transactionsPathname];
+    NSArray<NSDictionary<NSString*, NSString*>*> *transactionsList = [NSArray arrayWithContentsOfFile:transactionsPathname];
     self.skus = [transactionsList valueForKeyPath:@"@distinctUnionOfObjects.sku"];
-    NSMutableArray *transactionsMutable = [NSMutableArray arrayWithCapacity:self.skus.count];
+    NSMutableArray<NSArray<NSDictionary<NSString*, NSString*>*>*> *transactionsMutable = [NSMutableArray arrayWithCapacity:self.skus.count];
     for (NSString *sku in self.skus) {
-        NSArray *transactionsForSku = [transactionsList filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"self.sku == %@", sku]];
+        NSArray<NSDictionary<NSString*, NSString*>*> *transactionsForSku = [transactionsList filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"self.sku == %@", sku]];
         [transactionsMutable addObject:transactionsForSku];
     }
     self.transactions = [transactionsMutable copy];
@@ -51,7 +51,7 @@
     // TODO: move this background
     NSString *ratesPathname = [[NSBundle mainBundle] pathForResource:kRatesFilename ofType:nil];
     // TODO: if file exists at path
-    NSArray *ratesList = [NSArray arrayWithContentsOfFile:ratesPathname];
+    NSArray<NSDictionary<NSString*, NSString*>*> *ratesList = [NSArray arrayWithContentsOfFile:ratesPathname];
     self.convertionRates = [[BADConvertionRates alloc] initWithRates:ratesList];
     
     [self.tableView reloadData];

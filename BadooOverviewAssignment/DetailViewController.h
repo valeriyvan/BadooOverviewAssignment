@@ -12,7 +12,7 @@
 
 @interface DetailViewController : UITableViewController
 
-@property (strong, nonatomic) NSArray *transactions;
+@property (strong, nonatomic) NSArray<NSDictionary<NSString*, NSString*>*> *transactions;
 @property (strong, nonatomic) BADConvertionRates *convertionRates;
 
 @end

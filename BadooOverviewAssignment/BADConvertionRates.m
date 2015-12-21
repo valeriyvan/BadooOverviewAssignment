@@ -30,7 +30,7 @@ void printWeights(Weight *array, NSUInteger count);
     return self;
 }
 
-- (NSDictionary*)rateFor:(NSString*)f {
+- (NSDictionary<NSString*, NSString*>*)rateFor:(NSString*)f {
     return [[self.rates filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"self.from == %@", f]] firstObject];
 }
 
@@ -47,9 +47,9 @@ void printWeights(Weight *array, NSUInteger count);
         return 0;
     }
     
-    NSArray *fromVertices = [self.rates valueForKeyPath:@"@distinctUnionOfObjects.from"];
-    NSArray *toVertices = [self.rates valueForKeyPath:@"@distinctUnionOfObjects.to"];
-    NSArray *vertices = [@[fromVertices, toVertices] valueForKeyPath:@"@distinctUnionOfArrays.self"];
+    NSArray<NSString*> *fromVertices = [self.rates valueForKeyPath:@"@distinctUnionOfObjects.from"];
+    NSArray<NSString*> *toVertices = [self.rates valueForKeyPath:@"@distinctUnionOfObjects.to"];
+    NSArray<NSString*> *vertices = [@[fromVertices, toVertices] valueForKeyPath:@"@distinctUnionOfArrays.self"];
     
     // Set all weights to DBL_MAX
     NSUInteger verticesCount = vertices.count;
@@ -69,9 +69,9 @@ void printWeights(Weight *array, NSUInteger count);
         NSInteger indexOfVertexWithMinWeight = minidx(verticesWeights, verticesCount);
         verticesWeights[indexOfVertexWithMinWeight].visited = YES;
 
-        NSArray *edges = [self.rates filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"self.from == %@", vertices[indexOfVertexWithMinWeight]]];
+        NSArray<NSDictionary<NSString*, NSString*>*> *edges = [self.rates filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"self.from == %@", vertices[indexOfVertexWithMinWeight]]];
         for (NSUInteger nextEngeIndex = 0; nextEngeIndex < edges.count; nextEngeIndex++) {
-            NSDictionary *nextEdge = edges[nextEngeIndex];
+            NSDictionary<NSString*, NSString*> *nextEdge = edges[nextEngeIndex];
             NSString *toVertex = [[vertices filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"self == %@", nextEdge[@"to"]]] firstObject];
             NSUInteger toVertexIndex = [vertices indexOfObject:toVertex];
             double weight = verticesWeights[indexOfVertexWithMinWeight].weight == 0 ? [nextEdge[@"rate"] doubleValue] : verticesWeights[indexOfVertexWithMinWeight].weight * [nextEdge[@"rate"] doubleValue];

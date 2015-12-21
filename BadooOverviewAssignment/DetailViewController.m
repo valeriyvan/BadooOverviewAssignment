@@ -30,7 +30,7 @@
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
     // TODO: user viewForHeader and move this to background
     double total = 0;
-    for (NSDictionary *transaction in self.transactions) {
+    for (NSDictionary<NSString*, NSString*> *transaction in self.transactions) {
         NSString *currency = transaction[@"currency"];
         double amount = [transaction[@"amount"] doubleValue];
         total += amount * [self.convertionRates rateFrom:currency to:@"GBP"];
@@ -48,7 +48,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell detail" forIndexPath:indexPath];
-    NSDictionary *transaction = self.transactions[indexPath.row];
+    NSDictionary<NSString*, NSString*> *transaction = self.transactions[indexPath.row];
     NSString *currency = transaction[@"currency"];
     double amount = [transaction[@"amount"] doubleValue];
     cell.textLabel.text = [NSString stringWithFormat:@"%@%.2lf", [self currencySymbolFor:currency], amount];
