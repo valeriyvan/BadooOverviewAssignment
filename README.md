@@ -1,4 +1,6 @@
-At December of 2015 was doing code test for Badoo. Here's requrements:
+At December of 2015 I was doing code test for iOS developer position at Badoo. 
+
+Here's requrements:
 
 ![CodeTest TransactionViewer](https://cloud.githubusercontent.com/assets/1630974/12199252/74d4bb0c-b61f-11e5-916b-0da52dc5fc96.png)
 
