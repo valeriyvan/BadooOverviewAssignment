@@ -82,10 +82,6 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
-
-    //NSDictionary *dic = self.transactions[indexPath.row];
-    //cell.textLabel.text = dic[@"sku"];
-    
     cell.textLabel.text = self.skus[indexPath.row];
     NSArray *transactionsForSKU = self.transactions[indexPath.row];
     cell.detailTextLabel.text = [NSString stringWithFormat:@"%lu transactions", (unsigned long)transactionsForSKU.count];
