@@ -18,3 +18,7 @@ not correct names and mixture of domains in one instance
 We are grateful for your interest in Badoo and wish you every success in your career search. 
 
 Badoo Talent Team
+
+========
+
+**Once upon a time when in right mood I'll add here what I think about this...**
