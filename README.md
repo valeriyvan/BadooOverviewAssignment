@@ -4,7 +4,7 @@ Here's requrements:
 
 ![CodeTest TransactionViewer](https://cloud.githubusercontent.com/assets/1630974/12199252/74d4bb0c-b61f-11e5-916b-0da52dc5fc96.png)
 
-And here's Badoo's decision:
+100% reqirements were met. But here's Badoo's decision:
 
 Hi Valeriy, 
 
@@ -21,4 +21,6 @@ Badoo Talent Team
 
 ========
 
-**Once upon a time when in right mood I'll add here what I think about this...**
+Ok. What did't kill us makes us stronger.
+
+**Once upon a time when in right mood I'll add here what I think about this rejection and add self assessment of code in this project.**
